@@ -1,3 +1,11 @@
+# Calorie Counter
+
+This project uses the MERN Stack to create a webapp that helps me keep track of my calorie and protein intake.
+
+You add products and then choose them from a list when you are telling the website what you ate.
+
+The website will then use your entered information to calculate the total calories and protein.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
