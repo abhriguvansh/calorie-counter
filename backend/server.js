@@ -18,6 +18,9 @@ connection.once('open', () => {
   console.log('MongoDB success');
 });
 
+const ingredientsRouter = require('./routes/ingredients');
+app.use('/ingredients', ingredientRouter);
+
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
