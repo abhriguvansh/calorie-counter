@@ -19,7 +19,7 @@ connection.once('open', () => {
 });
 
 const ingredientsRouter = require('./routes/ingredients');
-app.use('/ingredients', ingredientRouter);
+app.use('/ingredients', ingredientsRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
