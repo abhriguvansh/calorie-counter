@@ -9,9 +9,31 @@ class AddIngredient extends React.Component {
       name: '',
       calories: null,
       protein: null,
+      ingredients: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.deleteIngredient = this.deleteIngredient.bind(this);
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/ingredients')
+      .then((res) => {
+        this.setState({ ingredients: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  deleteIngredient(id) {
+    axios
+      .delete(`http://localhost:5000/ingredients/${id}`)
+      .then((res) => console.log(res.data));
+    this.setState({
+      ingredients: this.state.ingredients.filter((e) => e._id !== id),
+    });
   }
   handleChange(e) {
     const { name, value } = e.target;
@@ -31,6 +53,7 @@ class AddIngredient extends React.Component {
     axios
       .post('http://localhost:5000/ingredients/add', ingredient)
       .then((res) => console.log(res.data));
+    window.location = '/';
   }
 
   render() {
@@ -63,7 +86,6 @@ class AddIngredient extends React.Component {
           <br />
           <button type='submit'>Add Ingredient</button>
         </form>
-        <div className='list'></div>
       </div>
     );
   }
