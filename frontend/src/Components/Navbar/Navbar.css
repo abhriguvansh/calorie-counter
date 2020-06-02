@@ -1,4 +1,4 @@
-.title {
+h1 {
   color: #50c679;
   font-size: 3em;
   padding: 0.1em;
@@ -10,8 +10,8 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 ul li {

@@ -1,4 +1,7 @@
 body {
-  background-image: linear-gradient(120deg, #49d4a2 0%, #54bf63 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#49d4a2), to(#54bf63));
+  background-image: linear-gradient(180deg, #49d4a2 0%, #54bf63 100%);
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=app.css.map */
