@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
 class Navbar extends Component {
   render() {
     return (
       <nav>
         <ul>
           <li>
-            <h1>Calorie Counter</h1>
+            <h1 className='title'>Calorie Counter</h1>
           </li>
           <li>
-            <Link to='/create'>Add Ingredient</Link>
+            <Link to='/add'>Add Ingredient</Link>
           </li>
         </ul>
       </nav>
