@@ -1,12 +1,13 @@
 import React from 'react';
 import './app.css';
-import Header from '../Header/Header';
+import Navbar from '../Navbar/Navbar';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <body>
-      <Header />
-    </body>
+    <Router>
+      <Navbar />
+    </Router>
   );
 }
 

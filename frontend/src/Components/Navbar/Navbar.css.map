@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,EAAE,CAAC;EACD,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,GAAG;EACd,OAAO,EAAE,KAAK;EACd,WAAW,EAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAmB;CAC7C;;AAED,AAAA,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,eAAe;CAC/B",
     "sources": [
-        "header.scss"
+        "Navbar.scss"
     ],
     "names": [],
-    "file": "header.css"
+    "file": "Navbar.css"
 }
