@@ -14,6 +14,21 @@ class EditIngredient extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/ingredients/' + this.props.match.params.id)
+      .then((res) => {
+        this.setState({
+          name: res.data.name,
+          calories: res.data.calories,
+          protein: res.data.protein,
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({
@@ -30,7 +45,11 @@ class EditIngredient extends React.Component {
     };
     console.log(ingredient);
     axios
-      .post('http://localhost:5000/ingredients/add', ingredient)
+      .post(
+        'http://localhost:5000/ingredients/update/' +
+          this.props.match.params.id,
+        ingredient
+      )
       .then((res) => console.log(res.data));
     window.location = '/';
   }
@@ -63,7 +82,7 @@ class EditIngredient extends React.Component {
             placeholder='Protein Per Gram'
           />
           <br />
-          <button type='submit'>Add Ingredient</button>
+          <button type='submit'>Edit Ingredient</button>
         </form>
       </div>
     );

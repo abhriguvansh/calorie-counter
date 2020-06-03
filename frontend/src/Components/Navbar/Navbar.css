@@ -23,7 +23,7 @@ ul li {
   margin: 0 2em;
 }
 
-a {
+.nav-button {
   margin-top: 1em;
   padding: 0.5em;
   color: #50c679;
@@ -34,7 +34,7 @@ a {
   float: right;
 }
 
-a:hover {
+.nav-button:hover {
   background-color: white;
   -webkit-transition: ease 0.8s;
   transition: ease 0.8s;

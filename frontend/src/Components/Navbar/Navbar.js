@@ -10,10 +10,14 @@ class Navbar extends Component {
             <h1 className='title'>Calorie Counter</h1>
           </li>
           <li>
-            <Link to='/add'>Add Ingredient</Link>
+            <Link className='nav-button' to='/add'>
+              Add Ingredient
+            </Link>
           </li>
           <li>
-            <Link to='/delete'>Delete Ingredient</Link>
+            <Link className='nav-button' to='/delete'>
+              Delete Ingredient
+            </Link>
           </li>
         </ul>
       </nav>

@@ -14,10 +14,6 @@ class AddIngredient extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  componentDidMount(){
-    axios.get('http://localhost:5000')
-  }
-
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({

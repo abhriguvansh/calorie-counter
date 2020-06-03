@@ -3,25 +3,28 @@ import './IngredientList.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function Ingredient(props) {
-  return (
-    <tr>
-      <td>{props.ingredient.name}</td>
-      <td>{props.ingredient.calories}</td>
-      <td>{props.ingredient.protein}</td>
-      <td>
-        <Link to={'/edit' + props.ingredient._id}>Edit</Link> |{' '}
-        <a href='#' onClick={props.deleteIngredient(props.ingredient._id)}>
-          Delete
-        </a>
-      </td>
-    </tr>
-  );
-}
+const Ingredient = (props) => (
+  <tr>
+    <td>{props.ingredient.name}</td>
+    <td>{props.ingredient.calories}</td>
+    <td>{props.ingredient.protein}</td>
+    <td>
+      <Link to={'/edit' + props.ingredient._id}>Edit</Link> |{' '}
+      <a
+        href='#'
+        onClick={() => {
+          props.deleteIngredient(props.ingredient._id);
+        }}
+      >
+        Delete
+      </a>
+    </td>
+  </tr>
+);
 
 class IngredientList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       ingredients: [],
     };
@@ -30,7 +33,7 @@ class IngredientList extends Component {
   }
   componentDidMount() {
     axios
-      .get('http://localhost:5000/ingredients')
+      .get('http://localhost:5000/ingredients/')
       .then((res) => {
         this.setState({ ingredients: res.data });
       })
@@ -49,6 +52,7 @@ class IngredientList extends Component {
   }
 
   IngredientList() {
+    console.log('test');
     return this.state.ingredients.map((currentIngredient) => {
       return (
         <Ingredient
@@ -61,15 +65,17 @@ class IngredientList extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Your Ingredients</h1>
+      <div className='table-div'>
+        <h1 className='table-title'>Your Ingredients</h1>
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Calories per gram</th>
-            <th>Protein per gram</th>
-          </tr>
-          <tbody>{this.IngredientList}</tbody>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Calories per gram</th>
+              <th>Protein per gram</th>
+            </tr>
+          </thead>
+          <tbody>{this.IngredientList()}</tbody>
         </table>
       </div>
     );
