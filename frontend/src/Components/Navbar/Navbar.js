@@ -12,6 +12,9 @@ class Navbar extends Component {
           <li>
             <Link to='/add'>Add Ingredient</Link>
           </li>
+          <li>
+            <Link to='/delete'>Delete Ingredient</Link>
+          </li>
         </ul>
       </nav>
     );

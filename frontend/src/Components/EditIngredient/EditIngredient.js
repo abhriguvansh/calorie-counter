@@ -1,8 +1,8 @@
 import React from 'react';
-import './AddIngredient.css';
+import './EditIngredient.css';
 import axios from 'axios';
 
-class AddIngredient extends React.Component {
+class EditIngredient extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -12,10 +12,6 @@ class AddIngredient extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  componentDidMount(){
-    axios.get('http://localhost:5000')
   }
 
   handleChange(e) {
@@ -74,4 +70,4 @@ class AddIngredient extends React.Component {
   }
 }
 
-export default AddIngredient;
+export default EditIngredient;
