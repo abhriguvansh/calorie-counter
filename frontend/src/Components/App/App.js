@@ -9,8 +9,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route path='/add' component={AddIngredient} />
-      <Route path='/delete' component={IngredientList} />
+      <Route path='/ingredients' component={IngredientList} />
     </Router>
   );
 }

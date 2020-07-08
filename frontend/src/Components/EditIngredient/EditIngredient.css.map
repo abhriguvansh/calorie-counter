@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "AddIngredient.scss"
+        "EditIngredient.scss"
     ],
     "names": [],
-    "file": "AddIngredient.css"
+    "file": "EditIngredient.css"
 }

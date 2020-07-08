@@ -15,8 +15,8 @@ class Navbar extends Component {
             </Link>
           </li>
           <li>
-            <Link className='nav-button' to='/delete'>
-              Delete Ingredient
+            <Link className='nav-button' to='/ingredients'>
+              Ingredients
             </Link>
           </li>
         </ul>
