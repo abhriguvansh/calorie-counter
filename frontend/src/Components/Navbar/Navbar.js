@@ -9,11 +9,7 @@ class Navbar extends Component {
           <li>
             <h1 className='title'>Calorie Counter</h1>
           </li>
-          <li>
-            <Link className='nav-button' to='/add'>
-              Add Ingredient
-            </Link>
-          </li>
+
           <li>
             <Link className='nav-button' to='/ingredients'>
               Ingredients
